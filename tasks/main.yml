@@ -1,0 +1,8 @@
+---
+- name: Use NPM to stop the target
+  command: npm stop
+  args:
+    chdir: "{{ target_path }}"
+  ignore_errors: yes
+  become: yes
+  become_user: root
